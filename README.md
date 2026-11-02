@@ -37,6 +37,9 @@ npx tsx prisma/seed.ts
 npm run dev
 ```
 
+Dataset sumber `data/heroes.csv` dan `data/skins.csv` dibaca langsung oleh seed.
+Harga kosong pada CSV disimpan sebagai `null`.
+
 Buka `http://localhost:3000/health`. Jika muncul `Server dan database OK`, server dan database sudah tersambung.
 
 Seed selalu mengosongkan tabel lebih dulu (`TRUNCATE ... RESTART IDENTITY CASCADE`), jadi aman dijalankan ulang sebelum demo. Hasilnya 133 hero, 892 skin, 3 player, dan 4 data hero milik player.
